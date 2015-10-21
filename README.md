@@ -17,6 +17,8 @@
 
 具体演示图如下：
 
-![abc](https://github.com/MarsCWD/TagList/blob/master/TagList/tagList.gif) 
+![abc](https://github.com/MarsCWD/TagList/blob/master/TagList/Picture/tagList.gif) 
+
+![abc](https://github.com/MarsCWD/TagList/blob/master/TagList/Picture/效果图.png)
 
 如果你觉得还不错，欢迎给我打分，你的支持是对我莫大的鼓励😄
