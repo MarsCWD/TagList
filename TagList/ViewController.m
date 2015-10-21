@@ -29,7 +29,7 @@
     NSArray *tagListNameArr3 = @[@"Foo",@"Tag Label 1",@"Label 2",@"Tag Label 3",@"Label 4",@"Tag Label 5",@"Tag 6",@"我做出来了"];
 
 
-    WDTagListView *tagListView1 = [[WDTagListView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 200)];
+    WDTagListView *tagListView1 = [[WDTagListView alloc] initWithFrame:CGRectMake(0, 20, self.view.frame.size.width, 200)];
     [tagListView1 viewWithListArray:tagListNameArr1 tagClick:^(NSUInteger tag) {
         [[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"第%zd个tag被选中",tag] message:nil delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil] show];
     }];
@@ -38,7 +38,7 @@
     [self.view addSubview:tagListView1];
 
 
-    WDTagListView *tagListView2 = [[WDTagListView alloc] initWithFrame:CGRectMake(0, 200, self.view.frame.size.width, 200)];
+    WDTagListView *tagListView2 = [[WDTagListView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 200)];
     tagListView2.normalImageName = @"tagBgIcon";
     tagListView2.tagFont = [UIFont boldSystemFontOfSize:18];
     tagListView2.tagHeight = 25;
@@ -49,7 +49,9 @@
 
     [self.view addSubview:tagListView2];
 
-    WDTagListView *tagListView3 = [[WDTagListView alloc] initWithFrame:CGRectMake(50, 300, self.view.frame.size.width - 100, 200)];
+    WDTagListView *tagListView3 = [[WDTagListView alloc] initWithFrame:CGRectMake(50, 200, self.view.frame.size.width - 100, 200)];
+    tagListView3.lineSpace = 10;
+    tagListView3.tagSpace = 10;
     [tagListView3 viewWithListArray:tagListNameArr3 tagClick:^(NSUInteger tag) {
         [[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"第%zd个tag被选中",tag] message:nil delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil] show];
     }];
@@ -57,6 +59,19 @@
 
     [self.view addSubview:tagListView3];
 
+
+    WDTagListView *tagListView4 = [[WDTagListView alloc] initWithFrame:CGRectMake(25, 350, self.view.frame.size.width - 50, 200)];
+    tagListView4.lineSpace = 20;
+    tagListView4.tagSpace = 10;
+    tagListView4.tagPadding = 40;
+    tagListView4.tagMargin = 20;
+    tagListView4.tagHeight = 30;
+    tagListView4.leftPadding = 10;
+    [tagListView4 viewWithListArray:tagListNameArr3 tagClick:^(NSUInteger tag) {
+        [[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"第%zd个tag被选中",tag] message:nil delegate:nil cancelButtonTitle:@"好的" otherButtonTitles:nil] show];
+    }];
+    tagListView4.backgroundColor = [UIColor blueColor];
+    [self.view addSubview:tagListView4];
 }
 
 - (void)didReceiveMemoryWarning {
